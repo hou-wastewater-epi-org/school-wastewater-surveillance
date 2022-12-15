@@ -1,5 +1,6 @@
 # HHD+Rice CDC Center of Excellence for Wastewater Epidemiology
 https://hou-wastewater-epi.org
+
 Contact email: info@hou-wastewater-epi.org
 
 Paper: “Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schools shows school, community, and citywide infections."
@@ -16,7 +17,7 @@ Shared under Creative Commons License 4.0 CC BY-SA 4.0 (https://creativecommons
 Code for analysis and results of "Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schools shows school, community, and citywide infections". 
 
 
-Fake example data is provided in the `example data` folder to produce figures similar to those found in the paper. The datasets are:
+Fake example data is provided in the `example data` folder to produce analysis and figures similar to those found in the paper. The names, ZIP codes, measurements, etc. have been replaced with arbitrary values. The datasets used as input for the analysis are:
 
 * `city-weeklyrate-flu.xlsx`, citywide weekly percentage of visits with discharge diagnosed Influenza
 * `schools-hisddata.csv`, metadata of HISD schools including enrollment
