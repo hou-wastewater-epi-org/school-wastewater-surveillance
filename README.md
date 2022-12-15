@@ -35,7 +35,7 @@ Fake example data is provided in the `example data` folder to produce analysis a
 * `schools-ids.csv`, IDs and names of schools for matching.
 * `schools-ww-covid.xlsx`, weekly school SARS-CoV-2 wastewater concentrations and positivity rates.
 * `schools-ww-flu.xlsx`, weekly school Influenza wastewater concentrations and positivity rates.
-* `schools-zipcodePR-covid.xlsx`, weekly COVID-19 positivity rates at the ZIP code level.
+* `schools-zipcodePR-covid.xlsx`, daily COVID-19 positivity rates at the ZIP code level.
 
 
 
