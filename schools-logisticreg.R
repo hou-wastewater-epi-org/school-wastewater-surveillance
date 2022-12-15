@@ -27,8 +27,7 @@ library(caret)
 ####### Load files: 
 
 ### File contains the weekly WW measurements and positivity rate of SARS-CoV-2 for each school
-ww0 <- read_excel("../data/schools-ww-pr-covid.xlsx", 
-                  range = cell_cols("A:I"), na = "NA")
+ww0 <- read_excel("example data/schools-ww-covid.xlsx")
 
 ###### Data cleaning
 
@@ -59,9 +58,9 @@ ww$logRep_mean <- log(ww$Rep_mean, 10)
 # make binary variable (1 for positive PR, 0 for 0 PR)
 ww$positive <- ww$Total_PR > 0
 
-ww$result <- ifelse(ww$Current.Result %in% c("High Positive", "Positive") == 1, 1, 0)
-ww$resultinc <- ifelse(ww$Current.Result %in% c("High Positive", "Positive", "Inconclusive") == 1, 1, 0)
-wwnoinc <- ww[ww$Current.Result != "Inconclusive",]
+ww$result <- ifelse(ww$`Current Result` %in% c("High Positive", "Positive") == 1, 1, 0)
+ww$resultinc <- ifelse(ww$`Current Result` %in% c("High Positive", "Positive", "Inconclusive") == 1, 1, 0)
+wwnoinc <- ww[ww$`Current Result` != "Inconclusive",]
 
 # Confusion matrix
 cm3 <- confusionMatrix(factor(wwnoinc$result), factor(as.numeric(wwnoinc$positive)), positive = "1", dnn = c("Wastewater", "Positive Result"))

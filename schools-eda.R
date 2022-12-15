@@ -20,22 +20,22 @@
 library(tidyverse)
 library(readxl)
 
-source('./formatting_plot_funs.R') # Source the general_functions file
+source('./formatting-plot-funs.R') # Source the general_functions file
 
 title_name <- 'Schools ordered by enrollment_7-April-22'
 
 ###### Load files: 
 
 ### Files contain the weekly WW measurements of SARS-CoV-2 and Influenza for each school
-all_data <- read_excel("../data/Wastewater Surveillance Manhole Report 05092022.xlsx")
-flu_all_data <- read_xlsx('../data/Wastewater Flu Surveillance Manhole Report 05092022.xlsx')
+all_data <- read_excel("example data/schools-ww-covid.xlsx")
+flu_all_data <- read_xlsx('example data/schools-ww-flu.xlsx')
 
 ### File containing school names and IDs for matching
-school_name_number <- read_csv("../data/school_name_number.csv") %>%
+school_name_number <- read_csv("example data/schools-ids.csv") %>%
   rename(School_Number = Facility)
 
 ### File with school names and short names, as well as enrollment
-school_metadata <- read_csv('../data/schools_metadata.csv') %>% 
+school_metadata <- read_csv('example data/schools-hisddata.csv') %>% 
   # reducing redundant columns -- Sharpstown International only one different : Elementary/Secondary and High school
   select(-Grade_Level) %>% rename(Grade_Level = Grade_Level_2) 
 
@@ -43,7 +43,7 @@ school_metadata <- read_csv('../data/schools_metadata.csv') %>%
 ###### Data cleaning
 
 school_metadata <- school_metadata %>%  # retain Grade_Level_2 and rename to Grade_Level 
-  inner_join(school_name_number, by = c('Facility' = 'School_Name'))
+  inner_join(school_name_number, by = c('Facility' = 'School_Code'))
 
 LOD <- 2556.4
 
@@ -71,7 +71,7 @@ school_rice.data <-
   # Order by enrollment
   arrange(Enrollment_as_Oct2019) %>% 
   mutate(across(c('Facility', 'School_Number'), # freeze the order of samples 
-                ~ fct_inorder(.x))) %>% 
+                ~ fct_inorder(factor(.x)))) %>% 
   
   # Collect all replicates and N1-N2 under the same column
   pivot_longer(cols = starts_with('Rep'),
@@ -111,8 +111,8 @@ school_flu.data <-
   
   # Order by enrollment
   arrange(Enrollment_as_Oct2019) %>% 
-  mutate(across(c('Facility', 'Symbol'), # freeze the order of samples 
-                ~ fct_inorder(.x))) %>% 
+  mutate(across(c('Facility', 'School_Number'), # freeze the order of samples 
+                ~ fct_inorder(factor(.x)))) %>% 
   
   # Leave out columns
   select(-Rep1_B, -Rep2_B) %>% # leaving out Influenza B samples ; mostly 0's or below LOD

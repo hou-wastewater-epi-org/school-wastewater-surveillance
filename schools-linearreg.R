@@ -30,8 +30,8 @@ library(caret)
 all_data <- read_excel("example data/schools-ww-covid.xlsx")
 
 ### Files containing school names, IDs, ZIP codes, and facilities for matching
-wwschoolnames <- read_excel("../example data/schools-ids.xlsx", na = "NA")
-dfhisd <- read_excel("example data/schools-hisddata.xlsx")
+wwschoolnames <- read_csv("example data/schools-ids.csv")
+dfhisd <- read.csv("example data/schools-hisddata.csv")
 
 ### File contains daily COVID-19 positivity rates by ZIP code
 dfwwpr <- read_excel("example data/schools-zipcodePR-covid.xlsx", na = ".")

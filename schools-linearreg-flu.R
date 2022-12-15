@@ -25,10 +25,10 @@ library(knitr)
 ###### Load files: 
 
 ### File contains weekly school WW flu measurements
-wwflu0 <- read_excel("~/wastewater/schools/data/schools-ww-flu.xlsx")
+wwflu0 <- read_excel("example data/schools-ww-flu.xlsx")
 
 ### File contains weekly citywide discharge diagnosed influenza rates
-flurate0 <- read_excel("~/wastewater/schools/data/city-weeklyrate-flu.xlsx")
+flurate0 <- read_excel("example data/city-weeklyrate-flu.xlsx")
 
 ###### Data cleaning
 
@@ -38,7 +38,7 @@ wwflu <- wwflu0[wwflu0$`Facility Type`=="School",]
 wwflu$Date <- wwflu$Date - 172800
 
 # Calculate proportion of schools with positive wastewater detections for each week
-wwflu$flu_pos <- ifelse(wwflu$Influenza_A_Result %in% c("Positive") == T, 1, 0)
+wwflu$flu_pos <- ifelse(wwflu$`Current Result` %in% c("Positive") == T, 1, 0)
 
 wwflu1 <- wwflu %>%
   group_by(Date) %>%
