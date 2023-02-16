@@ -24,6 +24,10 @@ The following R files are included to produce the analyses used in the paper:
 * `schools-linearreg.R`, linear regression analysis for ZIP code level COVID-19 positivity rates versus school SARS-CoV-2 wastewater data.
 * `schools-logisticreg.R`, logistic regression analysis for school positive test results versus school SARS-CoV-2 wastewater data.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+
+
 ### Data
 
 Fake example data is provided in the `Data` folder to produce analysis and figures similar to those found in the paper. The names, ZIP codes, measurements, etc. have been replaced with arbitrary values. The datasets used as input for the analysis are:
@@ -34,6 +38,13 @@ Fake example data is provided in the `Data` folder to produce analysis and figur
 * `schools-ww-covid.xlsx`, weekly school SARS-CoV-2 wastewater concentrations and positivity rates.
 * `schools-ww-flu.xlsx`, weekly school Influenza wastewater concentrations and positivity rates.
 * `schools-zipcodePR-covid.xlsx`, daily COVID-19 positivity rates at the ZIP code level.
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 
 ### Licensing
