@@ -54,4 +54,4 @@ Because code and intellectual work have different licensing needs, a separate `L
 
 - Files in the `Data` folder are licensed under the Creative Commons NonCommercial ShareAlike (CC by-NC-SA) license.
 
-We are happy to discuss the possibility of an alternate (dual) license for the files in either folder if you encounter a situation where your work's existing licenses are incompatible with our choices. Please reach out to  info@hou-wastewater-epi.org.
+We are happy to discuss the possibility of an alternate (dual) license for the files in either folder. If you encounter a situation where you are unable to use the work for desired purposes, for example, a license compatibility issue, please reach out to  info@hou-wastewater-epi.org.
