@@ -1,18 +1,18 @@
 #######################################################################
 #
 # HHD+Rice CDC Center of Excellence for Wastewater Epidemiology
-# https://hou-wastewater-epi.org
-# Contact email: info@hou-wastewater-epi.org
+#?https://hou-wastewater-epi.org
+# Contact email:?info@hou-wastewater-epi.org
 #
-# Paper: "Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 
+# Paper: "Wastewater surveillance of SARS-CoV-2 and influenza in preK-12?
 #               schools shows school, community, and citywide infections."
 #
 # PI of Analytics Group: Dr. Katherine B. Ensor, Department of Statistics, Rice University
 # Principal programmer for paper: Thomas Sun, Department of Statistics, Rice University
 # Principal programmer for HHD: Rebecca Schneider, Houston Health Department
 #
-# Shared under Creative Commons License 4.0 CC BY-SA 4.0 
-#              (https://creativecommons.org/licenses/by-sa/4.0/)
+# Code is shared under a GPL-3 License. See LICENSE file in Code folder.
+# Data is shared under a CC by-NC-SA license. see LICENSE file in Data folder.
 #
 #######################################################################
 
@@ -20,22 +20,22 @@
 library(tidyverse)
 library(readxl)
 
-source('./formatting-plot-funs.R') # Source the general_functions file
+source('Code/formatting-plot-funs.R') # Source the general_functions file
 
 title_name <- 'Schools ordered by enrollment_7-April-22'
 
 ###### Load files: 
 
 ### Files contain the weekly WW measurements of SARS-CoV-2 and Influenza for each school
-all_data <- read_excel("example data/schools-ww-covid.xlsx")
-flu_all_data <- read_xlsx('example data/schools-ww-flu.xlsx')
+all_data <- read_excel("./Data/schools-ww-covid.xlsx")
+flu_all_data <- read_xlsx('./Data/schools-ww-flu.xlsx')
 
 ### File containing school names and IDs for matching
-school_name_number <- read_csv("example data/schools-ids.csv") %>%
+school_name_number <- read_csv("./Data/schools-ids.csv") %>%
   rename(School_Number = Facility)
 
 ### File with school names and short names, as well as enrollment
-school_metadata <- read_csv('example data/schools-hisddata.csv') %>% 
+school_metadata <- read_csv('./Data/schools-hisddata.csv') %>% 
   # reducing redundant columns -- Sharpstown International only one different : Elementary/Secondary and High school
   select(-Grade_Level) %>% rename(Grade_Level = Grade_Level_2) 
 

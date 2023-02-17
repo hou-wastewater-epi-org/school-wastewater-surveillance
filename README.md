@@ -11,8 +11,6 @@ Principal programmer for paper: Thomas Sun, Department of Statistics, Rice Unive
 
 Principal programmer for HHD: Rebecca Schneider, Houston Health Department
 
-Shared under Creative Commons License 4.0 CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-
 ## Description
 Code for analysis and results of "Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schools shows school, community, and citywide infections". 
 
@@ -26,9 +24,13 @@ The following R files are included to produce the analyses used in the paper:
 * `schools-linearreg.R`, linear regression analysis for ZIP code level COVID-19 positivity rates versus school SARS-CoV-2 wastewater data.
 * `schools-logisticreg.R`, logistic regression analysis for school positive test results versus school SARS-CoV-2 wastewater data.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+
+
 ### Data
 
-Fake example data is provided in the `example data` folder to produce analysis and figures similar to those found in the paper. The names, ZIP codes, measurements, etc. have been replaced with arbitrary values. The datasets used as input for the analysis are:
+Fake example data is provided in the `Data` folder to produce analysis and figures similar to those found in the paper. The names, ZIP codes, measurements, etc. have been replaced with arbitrary values. The datasets used as input for the analysis are:
 
 * `city-weeklyrate-flu.xlsx`, citywide weekly percentage of visits with discharge diagnosed Influenza.
 * `schools-hisddata.csv`, metadata of HISD schools including enrollment.
@@ -37,11 +39,19 @@ Fake example data is provided in the `example data` folder to produce analysis a
 * `schools-ww-flu.xlsx`, weekly school Influenza wastewater concentrations and positivity rates.
 * `schools-zipcodePR-covid.xlsx`, daily COVID-19 positivity rates at the ZIP code level.
 
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
 
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
+
+### Licensing
+Because code and intellectual work have different licensing needs, a separate `LICENSE` file is contained in each folder and applies to the files in that folder:
+
+- Files in the `Code` folder are licensed under the GNU General Public License, Version 3 (GPL-3).
+
+- Files in the `Data` folder are licensed under the Creative Commons NonCommercial ShareAlike (CC by-NC-SA) license.
+
+We are happy to discuss the possibility of an alternate (dual) license for the files in either folder. If you encounter a situation where you are unable to use the work for desired purposes, for example, a license compatibility issue, please reach out to  info@hou-wastewater-epi.org.
