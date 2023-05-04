@@ -7,9 +7,10 @@ Paper: [“Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schoo
 
 PI of Analytics Group: Dr. Katherine B. Ensor, Department of Statistics, Rice University
 
-Principal programmer for paper: Thomas Sun, Department of Statistics, Rice University
+Lead Analyst for HHD: Rebecca Schneider, Houston Health Department
 
-Principal programmer for HHD: Rebecca Schneider, Houston Health Department
+Lead Analyst for Rice: Thomas Sun, Department of Statistics, Rice University
+
 
 ## Description
 Code for analysis and results of "Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schools shows school, community, and citywide infections". 
