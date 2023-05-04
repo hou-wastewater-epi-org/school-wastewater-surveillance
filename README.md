@@ -3,7 +3,7 @@ https://hou-wastewater-epi.org
 
 Contact email: info@hou-wastewater-epi.org
 
-Paper: “Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schools shows school, community, and citywide infections."
+Paper: [“Wastewater surveillance of SARS-CoV-2 and influenza in preK-12 schools shows school, community, and citywide infections."](https://doi.org/10.1016/j.watres.2023.119648)
 
 PI of Analytics Group: Dr. Katherine B. Ensor, Department of Statistics, Rice University
 
