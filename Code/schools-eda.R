@@ -24,7 +24,7 @@ source('Code/formatting-plot-funs.R') # Source the general_functions file
 
 title_name <- 'Schools ordered by enrollment_7-April-22'
 
-###### Load files: 
+###### Load (synthetic data) files: 
 
 ### Files contain the weekly WW measurements of SARS-CoV-2 and Influenza for each school
 all_data <- read_excel("./Data/schools-ww-covid.xlsx")

@@ -24,7 +24,7 @@ library(knitr)
 library(lme4)
 library(caret)
 
-###### Load files: 
+###### Load (synthetic data) files: 
 
 ### Files contain the weekly WW measurements of SARS-CoV-2 for each school
 all_data <- read_excel("./Data/schools-ww-covid.xlsx")

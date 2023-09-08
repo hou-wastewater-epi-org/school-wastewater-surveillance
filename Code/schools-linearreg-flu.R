@@ -22,7 +22,7 @@ library(readxl)
 library(tidyverse)
 library(knitr)
 
-###### Load files: 
+###### Load (synthetic data) files: 
 
 ### File contains weekly school WW flu measurements
 wwflu0 <- read_excel("./Data/schools-ww-flu.xlsx")
